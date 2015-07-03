@@ -1,18 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Vizmon 1.0</title>
-  
-  <!-- Angular  -->
-  <script src="/node_modules/angular/angular.js"></script>
-  
-  <!-- Highcharts -->  
-  <script src="http://code.highcharts.com/highcharts.src.js"></script>
-  <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
-  
+    <meta charset="utf-8">
+    <title>Vizmon 1.0</title>
+    
+    <!-- Angular  -->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/highcharts-ng/dist/highcharts-ng.js"></script>    
+    <script src="app.js"></script>
+        
+        
+    <!-- Highcharts -->  
+    <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
+    <script src="http://code.highcharts.com/highcharts.src.js"></script>
+        
 </head>
 <body>
-	
+	<div ng-app="myapp">
+	    <div ng-controller="myctrl">
+            {{text}}
+	        <div class="span12">
+	            <form class="form">Min: <input type="number" ng-model="chartConfig.xAxis.currentMin">
+	            Max: <input type="number" ng-model="chartConfig.xAxis.currentMax">
+	                </form>
+	            <br/>
+	            <button class="btn btn-primary" ng-click="addSeries()">Add Series</button>
+	            <button class="btn btn-primary" ng-click="addPoints()">Add Points to Random Series</button>
+	            <button class="btn btn-primary" ng-click="removeRandomSeries()">Remove Random Series</button>
+	            <button class="btn btn-primary" ng-click="toggleLoading()">Loading?</button>
+	            <p>Try zooming on the chart also...</p>
+	        </div>
+	        <div class="row">
+	            <highchart id="chart1" config="chartConfig" class="span10"></highchart>
+	        </div>
+	    </div>
+	</div>
+    	
 </body>
 </html>
