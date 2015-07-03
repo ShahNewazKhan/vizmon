@@ -1,6 +1,10 @@
 # vizmon
 
-A web app for visualizing / monitoring visitor information from a router.
+A web app for visualizing / monitoring visitor information from a router
+
+# Setup
+
+Clone the repo and open up index.html inside your favorite browser
 
 # Technologies used
 
