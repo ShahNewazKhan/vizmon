@@ -18,7 +18,6 @@
 <body>
 	<div ng-app="myapp">
 	    <div ng-controller="myctrl">
-            {{text}}
 	        <div class="span12">
 	            <form class="form">Min: <input type="number" ng-model="chartConfig.xAxis.currentMin">
 	            Max: <input type="number" ng-model="chartConfig.xAxis.currentMax">
@@ -31,7 +30,7 @@
 	            <p>Try zooming on the chart also...</p>
 	        </div>
 	        <div class="row">
-	            <highchart id="chart1" config="chartConfig" class="span10"></highchart>
+	            <highchart id="chart1" config="chartConfig" class="span6"></highchart>
 	        </div>
 	    </div>
 	</div>
