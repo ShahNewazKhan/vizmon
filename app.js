@@ -59,8 +59,7 @@ myapp.controller('myctrl', function ($scope) {
           },
           tooltip: {
               formatter: function() {
-                  return '<b>'+ this.x +'</b><br/>'+
-                      this.series.name +': '+ this.y;
+                  return this.series.name +': '+ this.y;
               }
           },
           plotOptions: {
